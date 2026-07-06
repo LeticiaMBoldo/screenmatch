@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.principal;
+
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
@@ -8,9 +10,7 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("Ai - Inteligência Artificial");
-        meuFilme.setAnoDeLancamento(2001);
+        Filme meuFilme = new Filme(2001,"Ai - Inteligência Artificial");
         meuFilme.setDuracaoEmMinutos(146);
 
         meuFilme.exibeFichaTecnica();
@@ -20,9 +20,7 @@ public class Principal {
         System.out.println(meuFilme.getTotalDeAvaliacoes() );
         System.out.println(meuFilme.obtemMedia());
 
-        Serie minhaSerie = new Serie();
-        minhaSerie.setNome("Enemies with Benefits");
-        minhaSerie.setAnoDeLancamento(2026);
+        Serie minhaSerie = new Serie(2026,"Enemies with Benefits");
         minhaSerie.setAtiva(true);
         minhaSerie.setEpisodiosPorTemporada(10);
         minhaSerie.setMinutosPorEpisodio(50);
@@ -30,9 +28,7 @@ public class Principal {
         System.out.println("Duranção para maratonar " + minhaSerie.getNome() + " é de " +
                 minhaSerie.getDuracaoEmMinutos());
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Sete minutos depois da meia noite");
-        outroFilme.setAnoDeLancamento(2016);
+        Filme outroFilme = new Filme(2016,"Sete minutos depois da meia noite");
         outroFilme.setDuracaoEmMinutos(108);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -51,10 +47,8 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        var filmeDoMazzaropi = new Filme();
-        filmeDoMazzaropi.setNome("Mazzaropi em Jéca Tatú");
+        var filmeDoMazzaropi = new Filme(1957,"Mazzaropi em Jéca Tatú");
         filmeDoMazzaropi.setDuracaoEmMinutos(140);
-        filmeDoMazzaropi.setAnoDeLancamento(1957);
         filmeDoMazzaropi.avalia(5);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();

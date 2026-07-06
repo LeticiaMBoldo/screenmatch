@@ -8,6 +8,13 @@ public class Titulo {
     private int totalDeAvaliacoes;
     private int duracaoEmMinutos;
 
+    /*construtor*/
+
+    public Titulo(int anoDeLancamento, String nome) {
+        this.anoDeLancamento = anoDeLancamento;
+        this.nome = nome;
+    }
+
     /*Metodo de acessor*/
     /*Getter*/
     public int getTotalDeAvaliacoes(){
