@@ -52,4 +52,9 @@ public class Serie extends Titulo{
         return temporadas * episodiosPorTemporada * minutosPorEpisodio;
         /*return super.getDuracaoEmMinutos(); -> conhecido como super classe, herda devolve as caracteristicas da classe mãe*/
     }
+
+    @Override
+    public String toString() {
+        return "Serie: "+ this.getNome() + " (" + this.getAnoDeLancamento() + ")";
+    }
 }
