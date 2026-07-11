@@ -1,1 +1,0 @@
-nome=Top Gun, anoDeLancamento=1986, Tempo de duração=11
